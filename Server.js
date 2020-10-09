@@ -51,7 +51,7 @@ app.post("/checkout", async (req, res) => {
         );
         status = "success";
     } catch (error) {
-        console.error("Error:");
+        console.error("Error:",error);
         status = "failure";
     }finally{
         res.json({ error, status });
